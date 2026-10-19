@@ -1,0 +1,311 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hassan Zhang AIR 6770</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="HASSAN ZHANG presents the AIR 6770 — Heritage Refined. Designed by Jacob &amp; Usairam.">
+<link rel="icon" id="favicon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..600&family=Jost:wght@300..600&display=swap">
+<link rel="stylesheet" href="css/styles.css">
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+} }
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<!-- Loading screen -->
+<div id="loader" role="status" aria-live="polite">
+  <div class="loader__inner">
+    <div class="loader__mark" id="loader-mark" aria-hidden="true"></div>
+    <p class="loader__label">Preparing the AIR&nbsp;6770</p>
+    <div class="loader__track"><span id="loader-bar"></span></div>
+    <p class="loader__pct"><span id="loader-pct">0</span>%</p>
+  </div>
+</div>
+
+<!-- One fixed WebGL stage behind every section -->
+<div id="stage-bg" aria-hidden="true"></div>
+<canvas id="gl" aria-hidden="true"></canvas>
+
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="Hassan Zhang, back to top">
+    <span class="brand__mark" data-logo="gold"></span>
+    <span class="brand__text">
+      <span class="brand__name">Hassan Zhang</span>
+      <span class="brand__tag">Crafted for the uncommon.</span>
+    </span>
+  </a>
+  <nav class="nav__links" id="nav-links" aria-label="Sections">
+    <a href="#design">Design</a>
+    <a href="#viewer">360°</a>
+    <a href="#anatomy">Anatomy</a>
+    <a href="#construction">Construction</a>
+    <a href="#heritage">Heritage</a>
+    <a href="#materials">Materials</a>
+    <a href="#designers">Designers</a>
+    <a href="#collection">Collection</a>
+  </nav>
+  <button class="nav__toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span class="sr">Menu</span></button>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero" id="top" data-scene="hero">
+    <div class="wrap hero__grid">
+      <div class="hero__copy">
+        <p class="eyebrow hero__in">Hassan Zhang presents</p>
+        <h1 class="hero__title hero__in">AIR<span>6770</span></h1>
+        <p class="hero__claim hero__in">A new class of original.</p>
+        <p class="hero__quote hero__in">“Born from an unconventional idea. Refined into a modern classic.”</p>
+        <div class="hero__actions hero__in">
+          <a class="btn btn--solid" href="#design">Explore the design</a>
+          <a class="btn btn--ghost" href="#viewer"><span class="btn__360" aria-hidden="true"></span>Explore in 360°</a>
+        </div>
+      </div>
+    </div>
+    <div class="wrap hero__foot">
+      <p class="credit hero__in">Designed by Jacob &amp; Usairam</p>
+      <a class="scroll-cue hero__in" href="#design" aria-label="Scroll to the design story"><span>Scroll</span><i></i></a>
+      <p class="hero__edition hero__in">Edition — Heritage Refined</p>
+    </div>
+    <p class="nogl-note" hidden>Your browser could not start WebGL, so the 3D model can’t be shown. The rest of the page still works.</p>
+  </section>
+
+  <!-- STORY -->
+  <div id="design">
+    <section class="chapter chapter--right" data-scene="idea">
+      <div class="wrap">
+        <article class="chapter__copy">
+          <p class="chapter__num" data-reveal>I · The idea</p>
+          <h2 class="display" data-reveal>It started as a shoe made by hand.</h2>
+          <p data-reveal>Jacob and Usairam built the first AIR&nbsp;6770 from cardboard, paint and glue. It had a yellow top crossed with black stripes, aubergine sides, a gold toe and a crimson base. The materials were simple. The idea was not.</p>
+          <p class="chapter__meta" data-reveal>Lateral profile · 1 : 1</p>
+        </article>
+      </div>
+    </section>
+    <section class="chapter chapter--left" data-scene="silhouette">
+      <div class="wrap">
+        <article class="chapter__copy">
+          <p class="chapter__num" data-reveal>II · The silhouette</p>
+          <h2 class="display" data-reveal>The same line, shaped around a foot.</h2>
+          <p data-reveal>The long, low profile and the rounded toe of the original stay. Around them, the proportions are corrected: a lower collar at the ankle, a toe box with room to move, and a heel that stands upright on the sole.</p>
+          <p class="chapter__meta" data-reveal>Toe box · three-quarter front</p>
+        </article>
+      </div>
+    </section>
+    <section class="chapter chapter--right" data-scene="signature">
+      <div class="wrap">
+        <article class="chapter__copy">
+          <p class="chapter__num" data-reveal>III · The signature</p>
+          <h2 class="display" data-reveal>Five colours, kept where they were.</h2>
+          <p data-reveal>Every block of colour in the original survives. Electric-yellow leather over the instep, aubergine suede on the sides, three black patent stripes across the vamp, a metallic-gold toe cap and a crimson rand around the base.</p>
+          <ul class="palette" data-reveal aria-label="Signature palette">
+            <li style="--c:#efb300">Electric yellow</li>
+            <li style="--c:#371848">Aubergine</li>
+            <li style="--c:#0c0a0a">Patent black</li>
+            <li style="--c:#d6b15c">Heritage gold</li>
+            <li style="--c:#ac1329">Crimson</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+    <section class="chapter chapter--left is-dark" data-scene="foundation">
+      <div class="wrap">
+        <article class="chapter__copy">
+          <p class="chapter__num" data-reveal>IV · The foundation</p>
+          <h2 class="display" data-reveal>Built up from the ground.</h2>
+          <p data-reveal>A sculpted ivory cupsole holds amber cushioning chambers you can see at the heel. Above it, a stitched crimson rand. Below it, an espresso rubber outsole with the HZ monogram moulded into the heel.</p>
+          <p class="chapter__meta" data-reveal>Heel and sole unit · rear three-quarter</p>
+        </article>
+      </div>
+    </section>
+  </div>
+
+  <!-- 360 VIEWER -->
+  <section class="viewer is-dark" id="viewer" data-scene="viewer" aria-labelledby="viewer-title">
+    <div class="viewer__stage" id="viewer-stage" tabindex="0" role="application" aria-label="3D viewer. Drag or use the arrow keys to turn the shoe. Plus and minus zoom. R resets."></div>
+    <div class="wrap viewer__head">
+      <p class="eyebrow">Interactive · 360°</p>
+      <h2 class="display" id="viewer-title">Every angle, considered.</h2>
+      <p class="viewer__hint">Drag to turn the shoe. Pinch, Ctrl + scroll or the buttons zoom in.</p>
+    </div>
+    <div class="viewer__dial" aria-hidden="true">
+      <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="44" class="dial__track"/><circle cx="50" cy="50" r="44" class="dial__arc" id="dial-arc"/><g id="dial-dot"><circle cx="50" cy="6" r="3.2"/></g></svg>
+      <div class="dial__read"><b id="dial-deg">038°</b><span id="dial-name">Lateral · toe</span></div>
+    </div>
+    <div class="wrap viewer__bar">
+      <div class="viewer__views" role="group" aria-label="Preset views">
+        <button data-view="lateral">Lateral</button>
+        <button data-view="toe">Toe</button>
+        <button data-view="medial">Medial</button>
+        <button data-view="heel">Heel</button>
+        <button data-view="top">Top</button>
+        <button data-view="sole">Sole</button>
+      </div>
+      <div class="viewer__zoom" role="group" aria-label="Zoom">
+        <button id="zoom-out" aria-label="Zoom out">−</button>
+        <button id="zoom-in" aria-label="Zoom in">+</button>
+        <button id="view-reset" class="viewer__reset">Reset</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ANATOMY -->
+  <section class="anatomy" id="anatomy" data-scene="anatomy" aria-labelledby="anatomy-title">
+    <div class="anatomy__hotspots" id="hotspots"></div>
+    <div class="wrap anatomy__grid">
+      <div class="anatomy__side">
+        <p class="eyebrow">Anatomy</p>
+        <h2 class="display" id="anatomy-title">Anatomy of the AIR&nbsp;6770</h2>
+        <ol class="anatomy__list" id="anatomy-list"></ol>
+      </div>
+      <aside class="anatomy__card" id="anatomy-card" aria-live="polite">
+        <p class="anatomy__card-num" id="ac-num">—</p>
+        <h3 id="ac-title">Select a component</h3>
+        <p id="ac-text">Choose a number on the shoe or in the list to see how that part is made.</p>
+        <div class="anatomy__nav">
+          <button id="ac-prev" aria-label="Previous component">←</button>
+          <button id="ac-next" aria-label="Next component">→</button>
+          <button id="ac-clear" class="link">Show whole shoe</button>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- EXPLODED VIEW -->
+  <section class="explode is-dark" id="construction" data-scene="construction" data-pin="1" aria-labelledby="explode-title">
+    <svg class="explode__lines" id="explode-lines" aria-hidden="true"></svg>
+    <div class="explode__labels" id="explode-labels" aria-hidden="true"></div>
+    <div class="wrap explode__head">
+      <p class="eyebrow">Construction</p>
+      <h2 class="display explode__title" id="explode-title"><span class="is-on" id="ex-a">Deconstructed.</span><span id="ex-b">Rebuilt.</span></h2>
+      <p class="explode__text">Thirteen components make one shoe. Keep scrolling to take the AIR&nbsp;6770 apart and put it back together, piece by piece.</p>
+      <div class="explode__rail" aria-hidden="true"><i id="explode-rail"></i></div>
+    </div>
+    <ol class="explode__legend" id="explode-legend" aria-label="Components"></ol>
+  </section>
+
+  <!-- HERITAGE REFINED -->
+  <section class="heritage" id="heritage" data-scene="heritage" aria-labelledby="heritage-title">
+    <div class="wrap heritage__grid">
+      <div class="heritage__copy">
+        <p class="eyebrow" data-reveal>Next-generation edition</p>
+        <h2 class="display" id="heritage-title" data-reveal>AIR 6770 — <em>Heritage Refined</em></h2>
+        <p data-reveal>The handmade original on one side, the refined edition on the other. Drag the handle to compare, then pick a detail to see what changed.</p>
+        <div class="chips" role="group" aria-label="Compare details" id="compare-chips" data-reveal></div>
+        <dl class="compare__notes" id="compare-notes" aria-live="polite">
+          <div><dt>Original</dt><dd id="cn-orig"></dd></div>
+          <div><dt>Refined</dt><dd id="cn-ref"></dd></div>
+        </dl>
+      </div>
+      <figure class="compare" id="compare" data-reveal>
+        <img class="compare__img compare__img--orig" src="assets/original-concept.jpg" alt="The original handmade AIR 6770: cardboard painted yellow, purple, gold and red." width="760" height="891">
+        <img class="compare__img compare__img--ref" id="compare-ref" alt="The AIR 6770 Heritage Refined, rendered from the same angle." width="760" height="891">
+        <div class="compare__handle" aria-hidden="true"><span></span></div>
+        <span class="compare__tag compare__tag--l">Original · handmade</span>
+        <span class="compare__tag compare__tag--r">Heritage Refined</span>
+        <label class="sr" for="compare-range">Comparison position</label>
+        <input type="range" id="compare-range" min="0" max="100" value="50">
+      </figure>
+    </div>
+  </section>
+
+  <!-- MATERIALS LAB -->
+  <section class="materials is-dark" id="materials" data-scene="materials" aria-labelledby="materials-title">
+    <div class="materials__dof" aria-hidden="true"></div>
+    <div class="wrap materials__grid">
+      <div class="materials__side">
+        <p class="eyebrow">Materials lab</p>
+        <h2 class="display" id="materials-title">Feel the craftsmanship.</h2>
+        <div class="materials__list" id="materials-list" role="group" aria-label="Materials"></div>
+      </div>
+      <aside class="materials__card" aria-live="polite">
+        <div class="materials__swatch" id="mat-swatch"></div>
+        <div>
+          <p class="materials__where" id="mat-where"></p>
+          <h3 id="mat-title"></h3>
+          <p id="mat-text"></p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- DESIGNERS -->
+  <section class="designers" id="designers" data-scene="designers" aria-labelledby="designers-title">
+    <div class="wrap designers__grid">
+      <div class="designers__copy">
+        <p class="eyebrow" data-reveal>Shoes by</p>
+        <p class="designers__names" data-reveal>Jacob <span>&amp;</span> Usairam</p>
+        <h2 class="display" id="designers-title" data-reveal>Two minds. One original.</h2>
+        <p data-reveal>The AIR&nbsp;6770 began as a shoe Jacob and Usairam made by hand. They chose its colours, its stripes and its long, low shape. The HASSAN ZHANG edition keeps every one of those choices and changes only how the shoe is made.</p>
+        <p data-reveal>The yellow, the aubergine, the black stripes, the gold toe and the crimson base all come from their original. Nothing about the colour blocking was added later.</p>
+      </div>
+      <figure class="archive" data-reveal>
+        <img src="assets/original-concept.jpg" alt="The original handmade shoe by Jacob and Usairam, made from painted cardboard." width="760" height="891" loading="lazy">
+        <figcaption><b>Archive 001</b> The handmade original. Cardboard, paint and glue.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- COLLECTION -->
+  <section class="collection" id="collection" data-scene="collection" aria-labelledby="collection-title">
+    <div class="wrap">
+      <div class="collection__head">
+        <p class="eyebrow" data-reveal>The collection</p>
+        <h2 class="display" id="collection-title" data-reveal>AIR 6770 · Heritage Refined</h2>
+      </div>
+      <div class="collection__grid">
+        <dl class="specs" data-reveal>
+          <div><dt>Model</dt><dd>AIR 6770</dd></div>
+          <div><dt>Brand</dt><dd>Hassan Zhang</dd></div>
+          <div><dt>Edition</dt><dd>Heritage Refined</dd></div>
+          <div><dt>Designed by</dt><dd>Jacob &amp; Usairam</dd></div>
+          <div><dt>Palette</dt><dd>
+            <ul class="palette palette--small" aria-label="Palette">
+              <li style="--c:#efb300">Electric yellow</li><li style="--c:#371848">Aubergine</li><li style="--c:#0c0a0a">Patent black</li>
+              <li style="--c:#d6b15c">Heritage gold</li><li style="--c:#ac1329">Crimson</li><li style="--c:#eee5d3">Ivory</li><li style="--c:#3a2820">Espresso</li>
+            </ul></dd></div>
+          <div><dt>Upper</dt><dd>Pebbled yellow leather, aubergine suede, metallic-gold leather, black patent leather</dd></div>
+          <div><dt>Lining</dt><dd>Woven ivory textile, padded nappa collar, removable printed insole</dd></div>
+          <div><dt>Sole</dt><dd>Sculpted cupsole with amber cushioning chambers, stitched crimson rand, rubber outsole</dd></div>
+          <div><dt>Availability</dt><dd>Concept edition. Not for sale.</dd></div>
+        </dl>
+        <div class="gallery" id="gallery"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL SCENE -->
+  <section class="finale is-dark" id="finale" data-scene="finale" aria-labelledby="finale-title">
+    <div class="wrap finale__copy">
+      <p class="eyebrow" data-reveal>Hassan Zhang</p>
+      <h2 class="finale__title" id="finale-title" data-reveal>AIR 6770 <span>Heritage Refined</span></h2>
+      <p class="finale__quote" data-reveal>“An original idea. A lasting impression.”</p>
+    </div>
+    <div class="wrap finale__foot">
+      <span class="finale__mark" data-logo="gold" data-reveal></span>
+      <p class="credit" data-reveal>Designed by Jacob &amp; Usairam</p>
+    </div>
+  </section>
+</main>
+
+<footer class="footer is-dark">
+  <div class="wrap footer__grid">
+    <div class="footer__brand">
+      <span class="footer__mark" data-logo="gold"></span>
+      <p class="footer__name">Hassan Zhang</p>
+      <p class="footer__tag">Crafted for the uncommon.</p>
+    </div>
+    <nav class="footer__nav" aria-label="Footer">
+      <a href="#design">Design</a><a href="#viewer">360° viewer</a><a href="#anatomy">Anatomy</a><a href="#construction">Construction</a>
+      <a href="#heritage">Heritage</a><a href="#materials">Materials</a><a href="#designers">Designers</a><a href="#collection">Collection</a>
+    </nav>
+    <p class="footer__note">AIR 6770 is a concept edition presented by Hassan Zhang, a fictional house. It is not available for purchase. Original shoe by Jacob &amp; Usairam.</p>
+  </div>
+</footer>
+
+<script type="module" src="js/main.js"></script>
